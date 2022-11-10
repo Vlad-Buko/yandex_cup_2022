@@ -28,16 +28,15 @@ class Solution {
 
     private int dataCenterInInput = 0;
     private int serverInInput = 0;
+    private ArrayList<int []> arrayDatacenter = new ArrayList<>();
+    private ArrayList<Integer> resetForDataCenter = new ArrayList<>();
 
     public void inputValueForSolution (int amountDataCenter, int amountServer, int amountDoing) {
-
-        ArrayList<int []> arrayDatacenter = new ArrayList<>();
         int count = 1;
-
         // amount data center
 
         for (int i = 0; i < amountDataCenter; i++) {
-            arrayDatacenter.add(new int[3]) ;
+            arrayDatacenter.add(new int[amountServer]) ;
         }
 
         int counter = 0;
@@ -63,10 +62,12 @@ class Solution {
                     continue;
 
                 case "RESET" :
-                    int countResetForDataCenter = 0;
-                    int lastIndexArray = arrayDatacenter.size() + 1;
+                    // input we get RESET 2
+                    int countForReset = 1;
+                    resetForDataCenter.add(dataCenterInInput, countForReset++);
+                    arrayDatacenter.add(dataCenterInInput, new int[amountServer]);
 
-                    arrayDatacenter.lastIndexOf(1);
+                    continue;
                 case "GETMAX" :
 
             }
